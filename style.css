@@ -50,6 +50,10 @@ img {
     width: 100%;
 }
 
+.img-nagy{
+    width: 300px;
+}
+
 div.tarolo {
     display: flex;
     justify-content: flex-start;

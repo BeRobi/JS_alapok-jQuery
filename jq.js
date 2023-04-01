@@ -6,7 +6,7 @@ $(function () {
   elemekFormazasa1();
   esemenyKezeles1();
   esemenyKezeles2();
-
+ 
 });
 
 function elemekElerese1() {
@@ -44,23 +44,32 @@ function elemekFormazasa1() {
 }
 
 function esemenyKezeles1() {
-    const listaELEM = $(".lista");
-    listaELEM.on("click", beletesz);
+  const listaELEM = $(".lista");
+  listaELEM.on("click", beletesz);
 }
 
 function beletesz() {
-    const listaELEM = $(".lista");
-    const divELEM = $(".kattintasutan");
-    divELEM.append(listaELEM);
+  const listaELEM = $(".lista");
+  const divELEM = $(".kattintasutan");
+  divELEM.append(listaELEM);
 }
 
 function esemenyKezeles2() {
-    const feladatDIV = $(".feladat");
-    feladatDIV.append("<button>Gomb</button>");
-    let GOMB = $(".feladat button")
-    GOMB.on("click", function(){
-        feladatDIV.append("<div><img>asd</div>")
-    });
+  const feladatDIV = $(".feladat");
+  feladatDIV.append("<button>Gomb</button>");
+  let GOMB = $(".feladat button");
+  GOMB.on("click", function () {
+    feladatDIV.append(
+      "<div><img src=https://4.bp.blogspot.com/-vA4SiaM3rk8/TvfdbwcVGZI/AAAAAAAAENk/EQEbBrNEPqc/s1600/monkey_1.jpg alt=`monkey`></div>"
+      
+    );
+    esemenyKezeles3();
+  });
 }
 
-
+function esemenyKezeles3() {
+    const kepELEM = $(".feladat div");
+    kepELEM.on("mousemove", function() {
+        kepELEM.addClass("img-nagy");
+    })
+}
